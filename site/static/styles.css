@@ -12,8 +12,8 @@ body, html {
 
 .logo {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 0px;
+    left: -10px;
     width: 120px; /* Замініть на бажаний розмір */
     height: auto;
     z-index: 1;
@@ -31,12 +31,56 @@ body, html {
     z-index: -1;
 }
 
-.content {
+.overlay {
+   position: fixed;
+    top: 50%; /* Розміщення по вертикалі по центру */
+    left: 50%; /* Розміщення по горизонталі по центру */
+    transform: translate(-50%, -50%);
+    width: 88%;
+    height: 88%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.header {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
     z-index: 2;
+}
+
+.search-label {
+    font-size: 10px;
+    margin-right: 10px;
+    color: #fff; /* Колір тексту */
+}
+
+.search-input {
+    padding: 8px; /* Внутрішній відступ */
+    font-size: 18px; /* Збільшений розмір шрифту */
+    width: 1400px; /* Збільшена ширина */
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #ddd; /* Колір плейсхолдера */
+}
+
+
+.content {
+    position: absolute;
+    top: 60%; /* Збільште це значення, якщо потрібно */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
 }
