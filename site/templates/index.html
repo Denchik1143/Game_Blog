@@ -15,10 +15,12 @@
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
-      <div class="header">
-    <label for="search" class="search-label"></label>
-    <input type="text" id="search" name="search" class="search-input" value="{{ search_query }}">
-</div>
+        <div class="header">
+            <div class="input-group">
+                <input type="text" id="search" name="search" class="form-control" placeholder="Пошук" value="{{ search_query }}">
+                <button type="button" class="search-button">&#128269;</button>
+            </div>
+        </div>
         <div class="content">
             <h2>Найновіші ігрові новини</h2>
             <!-- Додайте інші елементи контенту тут -->

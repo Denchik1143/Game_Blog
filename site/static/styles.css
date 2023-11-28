@@ -53,25 +53,37 @@ body, html {
     z-index: 2;
 }
 
-.search-label {
-    font-size: 10px;
-    margin-right: 10px;
-    color: #fff; /* Колір тексту */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1300px; /* Змініть ширину за потребою */
+    margin: 0 auto; /* Розміщення по центру */
 }
 
-.search-input {
-    padding: 8px; /* Внутрішній відступ */
-    font-size: 18px; /* Збільшений розмір шрифту */
-    width: 1400px; /* Збільшена ширина */
-    border: 1px solid #fff;
+.form-control {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    outline: none;
+    box-sizing: border-box;
 }
 
-.search-input::placeholder {
-    color: #ddd; /* Колір плейсхолдера */
+.search-button {
+    background-color: #2C3E50; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту */
+    border: none;
+    padding: 5px 5px; /* Відступи */
+    font-size: 20px; /* Розмір шрифту */
+    border-radius: 50px; /* Закруглені кути */
+    cursor: pointer;
+    margin-left: 10px; /* Додатковий відступ від лівого краю поля вводу */
+    transition: background-color 0.3s ease; /* Плавний перехід кольору фону */
+}
+
+.search-button:hover {
+    background-color: #1F2C38; /* Колір фону при наведенні */
 }
 
 
