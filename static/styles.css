@@ -34,14 +34,32 @@ body {
 }
 
 .form-control {
-    flex: 1;
+    width: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin: 0 auto;
 }
 
-.search-button,
+.search-button {
+   background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Додано анімацію при наведенні */
+}
+
+.search-button:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Зміна прозорості при наведенні */
+}
+
+.search-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 .openFormButton {
     background-color: #4CAF50;
     color: #fff;
