@@ -13,8 +13,8 @@ body, html {
 .logo {
     position: absolute;
     top: 0px;
-    left: -10px;
-    width: 120px; /* Замініть на бажаний розмір */
+    left: 5px;
+    width: 100px; /* Замініть на бажаний розмір */
     height: auto;
     z-index: 1;
 }
@@ -96,3 +96,25 @@ body, html {
     color: #fff;
     z-index: 3;
 }
+
+.openFormButton {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 50px;
+    border: 2px solid #2980b9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.openFormButton:hover {
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+
+
+
