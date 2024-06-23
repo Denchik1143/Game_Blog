@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBlog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=2" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-link">
+                <img src="{{ url_for('static', filename='your_logo.png') }}" alt="Логотип" class="logo">
+            </a>
+            <div class="search-container">
+                <input type="text" id="search" name="search" class="form-control" placeholder="Search the world's largest fan vlog platform">
+                <button type="button" class="search-button">🔍</button>
+            </div>
+            <nav>
+                <a href="#" id="openFormButton" class="openFormButton">🢛</a>
+                <a href="#" id="emptyButton" class="emptyButton">🎼</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='your_video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="content" id="publication-overlay">
+            <h1><img src="{{ url_for('static', filename='GameNews.png') }}" alt="GameNews" class="game-news-image"></h1>
+            <div class="news-container">
+                <!-- Hard-coded news post -->
+                <div class="news-item">
+                    <h2>Український виживач Ocean Keeper у червні виходить в бета реліз</h2>
+                    <img src="{{ url_for('static', filename='newspost.png') }}" alt="Зображення новини">
+                    <img src="{{ url_for('static', filename='newspost2.png') }}" alt="Зображення новини" class="news-image2">
+                    <p>Українська геймдев команда RetroStyle Games анонсувала вихід своєї нової гри – Ocean Keeper. Це гра яка об’єднує в собі елементи tower defense та roguelike, обіцяючи гравцям неймовірні пригоди у глибинах океану.</p>
+                    <p>Виживач розробляє команда RetroStyle Games з 10 людей, включаючи розробників і дизайнерів, які приносять свій досвід в гру. А досвід у студії точно є, раніше студія випустила дві успішні мобільні гри Zombie Run 2 та Last Pirate: Survival Island які разом мають 11 мільйонів завантажень тільки у Google Play.</p>
+                    <div class="actions-bottom">
+                        <button id="likeButton" class="action-button">👍 Лайків</button>
+                        <button id="commentButton" class="action-button">💬 Коментарі</button>
+                        <button id="shareButton" class="action-button">↗️ Поділитись</button>
+                    </div>
+                </div>
+            </div>
+            <div id="formContainer" class="form-container" style="display: none;">
+                <h2 id="formTitle">Форма Завантаження</h2>
+                <form id="uploadForm" enctype="multipart/form-data" action="/submit" method="POST">
+                    <label for="title">Заголовок:</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="image">Зображення:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+
+                    <label for="text">Текст:</label>
+                    <textarea id="text" name="text" rows="4" required></textarea>
+
+                    <button type="submit" id="submitButton">Зберегти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="musicPlayer" class="music-player" style="display: none;">
+        <audio id="audioPlayer" controls autoplay>
+            <!-- Music tracks will be dynamically added here -->
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+    </div>
+    <script src="static/myscript.js"></script>
+</body>
+</html>
